@@ -23,9 +23,8 @@ button,
   padding: size(10) size(20);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   border: 1px solid  #64ACFF;
-background:#64ACFF;
+  background:#64ACFF;
   @include radius(6);
-  border: 1px solid $green;
   color: #05080D;
   @include font($primaryFont,16,medium,normal,20);
   
