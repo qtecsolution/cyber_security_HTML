@@ -285,7 +285,11 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        padding: size(65) size(80);
+        padding: size(40) size(20);
+        @include breakpoint(mobile576) {
+            padding: size(65) size(80);
+            
+        }
         
         
     }
@@ -298,19 +302,26 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             font-family: Comfortaa;
-            font-size: 48px;
+            font-size: 36px;
             font-style: normal;
             font-weight: 700;
             line-height: 120%; /* 57.6px */
-            letter-spacing: -0.96px;
+            letter-spacing: -0.96px; 
+            @include breakpoint(mobile576) {
+                font-size: 48px;
+            }
         } 
         .des {
             color: #8C8C8C;
             font-family: Roboto Mono;
-            font-size: 20px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 30px; 
+            @include breakpoint(mobile576) {
+            font-size: 20px;
+                
+            }
           
         }
     }
