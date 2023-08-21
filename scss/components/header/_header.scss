@@ -77,13 +77,17 @@
 
 
 .hero {
-    background-image: url(../../../assets/images/hero-bg/1.png);
+    background-image: url(../images/hero-bg/1.png);
     background-size: 80%;
     background-position: right;
     position: relative;
     height: calc(100vh - 80px);
     mix-blend-mode: hard-light;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    &.hero-landing-2 {
+        background-size: cover;
+        background-image: url(../images/hero-bg/2.png);
+    }
     .hero-content {
         position: absolute;
         top: 50%;
