@@ -1,0 +1,156 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.footer {
+    @include border-single(top,solid,1,$footerborder);
+   padding-top: size(50);
+    &-content {
+
+    }
+    &-footer {
+
+    }
+    &-top {
+        padding-bottom: size(92);
+        .footerMenu {
+            @include flex-column;
+            gap: size(16);
+            h3 {
+                font-family: Comfortaa;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+                color: $gray-4;
+            }
+            .footerList {
+                @include list-vertical;
+                gap: size(16);
+                li {
+                    font-family: Roboto Mono;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px; /* 171.429% */
+                    color: $gray-6;
+                }
+                &-link {
+                    color: $gray-6;
+                    font-family: Roboto Mono;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                    @include transitionsall;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5px;
+                        left: 50%; 
+                        transform: translateX(-50%); 
+                        width: 0;
+                        height: 2px;
+                        background-color: $white; 
+                        opacity: 0; 
+                        transition: width 0.3s, opacity 0.3s; 
+                    }
+                    @include hover {
+                        color: $white;
+                        font-weight: 600;
+                    }
+                    
+
+                    
+                }
+            }
+            .footerList-link:hover {
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            } 
+            .socialLinks {
+               ul {
+                @include list-horizontal;
+                gap: size(24);
+               }
+            }
+        }
+    }
+    &-bottom {
+        @include border-single(top,solid,1,$footerborder);
+        padding-top: size(20);
+        padding-bottom: size(16);
+
+        .bootom-content {
+            @include flex-column;
+            align-items: center;
+            gap: size(10) ;
+            @include breakpoint(tab992) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+        }
+        
+        .bottom-left {
+            @include flex;
+            flex-direction: column;
+            @include breakpoint(mobile576) {
+                @include flex-between;
+            }
+            .copyright {
+                font-family: Comfortaa;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                color: $gray-6;
+            }
+        }
+        .bottom-right {
+
+        }
+        .bottomList {
+            @include list-horizontal;
+            gap: size(10);
+            @include breakpoint(mobile576) {
+                gap: size(32);
+            }
+            &-item {
+
+            }
+            &-link {
+                font-family: Comfortaa;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px; 
+                color: $gray-6;
+                position: relative;
+                @include breakpoint(mobile576) {
+                    font-size: 14px;
+                } 
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%; 
+                    transform: translateX(-50%); 
+                    width: 0;
+                    height: 2px;
+                    background-color: $white; 
+                    opacity: 0; 
+                    transition: width 0.3s, opacity 0.3s; 
+                }
+              &:hover {
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+              }
+            }
+        }
+    }
+}

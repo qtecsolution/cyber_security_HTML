@@ -1,0 +1,63 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.modal {
+  &-content {
+    @include radius(25);
+    border: none;
+    padding: size(5);
+    @include breakpoint(mobile576) {
+      padding: size(10);
+    }
+    @include breakpoint(tab992) {
+      padding: size(20);
+    }
+   
+  }
+  
+  &-header {
+    border-bottom: 0;
+   
+    .btn-close {
+      @include square(18);
+      @include flex-center;
+      overflow: hidden;
+      opacity: 1;
+
+      svg {
+        @include wh100;
+        @include transitiontransform;
+
+        path {
+          
+          @include transitionsall;
+        }
+      }
+
+      @include hover {
+        svg {
+          @include rotate(90);
+
+          path {
+           
+          }
+        }
+      }
+    }
+  }
+  &.filterModal {
+    
+    .modal-content {
+        @include radius(30);
+        
+    }
+    .modal-body{
+       
+
+    }
+    .modal-footer{
+      
+    }
+}
+
+}

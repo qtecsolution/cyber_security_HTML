@@ -1,0 +1,132 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+
+
+
+// .customradio{
+//   &-box{
+//     &:checked ~ .customradio-label{
+//       color: $gray-800;
+//       &::before{
+//         background-color: $white;
+//         @include border(solid ,1 ,$primary3);
+//       }
+//       &::after{
+//         opacity: 1;
+//         visibility: visible;
+        
+//       }
+//     }
+
+//   }
+//   &-label{
+//     position: relative;
+//     color: $gray-600;
+//     padding-left: size(30);
+//     cursor: pointer;
+//     @include transitionscolor;
+//     @include font($secondaryFont,14,medium,normal,18);
+//     @include breakpoint(mobile576){
+//       @include font($secondaryFont,14,medium,normal,20);
+//     } 
+//     @include hover {
+//       color: $gray-700;
+//     }
+
+//     &::before,
+//     &::after{
+//       content: '';
+//       @include absolute(top 50% left 0);
+     
+//     }
+//     &::before{
+//       @include square(20);
+//       @include border(solid ,1 ,#ddd);
+//       background: $white;
+//       @include radius(50);
+//       @include translateY(-50%);
+//       @include transitionsall;
+      
+//     }
+//     &::after{
+//       width: size(14);
+//       height: size(14);
+//       @include border(solid,2,#fff);
+//       @include transform(translateY(-50%));
+//       background-color: $primary3;
+//       left: 3px;
+//       @include circle;
+//       opacity: 0;
+//       visibility: hidden;
+//       @include transitionsall;
+      
+//     }
+//   }
+// }
+
+
+// .option {
+//   .optioninput {
+//     &:checked ~ .optionlabel {
+//       background: $gray-200;
+//       border-color: $primary;
+
+//       .title {
+//         color: $white;
+//       }
+//     }
+//   }
+
+//   .optionlabel {
+//     background: $white;
+//     @include border(solid, 1, $gray-300);
+//     @include radius(6);
+//     cursor: pointer;
+//     @include flex-center-column;
+//     gap: size(10);
+//     padding: size(6) size(14);
+//     text-align: center;
+//     @include transitionsall;
+
+//     @include breakpoint(tab992) {
+//       // padding: size(28);
+//     }
+
+//     .icon {
+//       @include square(48);
+//       @include flex-center;
+//       overflow: hidden;
+
+//       @include breakpoint(mobile768) {
+//         height: size(30);
+//         width: size(46);
+//       }
+
+//       @include breakpoint(tab992) {
+//         // @include square(60);
+//         height: size(30);
+//         width: size(46);
+//       }
+
+//       svg {
+//         @include wh100;
+//       }
+//     }
+
+//   }
+// }
+
+// .guestinfo-card {
+//   .customradio{
+//     &-label {
+//       color: $labelText;
+    
+//       @include font($secondaryFont,12,medium,normal,18);
+//       @include breakpoint(mobile576){
+//         @include font($secondaryFont,14,medium,normal,24);
+//       }
+//     }
+//   }
+ 
+// }

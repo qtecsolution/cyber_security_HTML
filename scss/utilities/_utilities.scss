@@ -1,0 +1,34 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.go-container {
+  max-width: 90%;
+  margin-inline: auto;
+  transition: width .1s;
+  
+}
+
+
+@media only screen and (min-width : 1600px) {
+
+  .go-container { 
+   max-width: size(1472)  ;
+  } 
+
+} 
+@media only screen and (min-width : 2000px) {
+
+  .go-container { 
+   max-width: 80%;
+
+  } 
+
+} 
+@media only screen and (min-width : 2300px) {
+
+  .go-container { 
+   max-width: 70%;
+
+  } 
+
+} 

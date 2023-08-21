@@ -1,0 +1,118 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.header {
+    height: size(80); 
+    @include flex;
+    align-items: center;
+ 
+
+}
+
+// nav 
+.header-nav {
+    @include flex-between;
+    @include h100;
+
+    .leftMenu,
+    .rightMenu {
+       @include list-horizontal;
+       list-style: none;
+        gap: size(20);
+        
+        @include breakpoint(tab992) {
+            gap: size(32);
+        }
+       figure {
+        width: size(125);
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+       }
+        &-item {
+            position: relative;
+        }
+        &-link {
+            color: $gray-6; 
+            @include font($primaryFont,14,normal,normal,20);
+            
+            @include transitionsall;
+         &:hover {
+            color: $primary-text;
+            font-weight: 500;
+         }   
+        } 
+        .header-dropwown {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            background-color: #333;
+            
+           
+            .dropdownlist {
+                @include list-vertical;
+                @include font($primaryFont,14,normal,normal,20);
+                
+                &-item {
+                    background-color: red;
+                }
+                &-link {
+                    color: $white;
+                    padding: 10px  0;
+                    display: block;
+                    text-align: center; 
+                    @include hover {
+                        background: #444;
+                    }
+                }
+            }
+
+
+        }
+    }
+   
+}
+
+
+
+.hero {
+    background-image: url(../../../assets/images/hero-bg/1.png);
+    background-size: 80%;
+    background-position: right;
+    position: relative;
+    height: calc(100vh - 80px);
+    mix-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $white;
+       .left-content {
+        @include flex-column;
+        gap: size(24);
+        align-items: flex-start;
+        .hero-title {
+            @include font($secondaryFont,20,normal,normal,30);
+            font-weight: bold;
+            @include breakpoint(mobile576) {
+            @include font($secondaryFont,30,normal,normal,40);
+            font-weight: bold;
+            }
+            @include breakpoint(mobile576) {
+            @include font($secondaryFont,40,normal,normal,60);
+            font-weight: bold;
+            }
+            @include breakpoint(tab992) {
+                
+            }
+    
+            
+        }
+        .hero-text {
+    
+        }
+       }
+    }
+}

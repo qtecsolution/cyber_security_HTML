@@ -1,0 +1,57 @@
+// THEME COLORS
+$primary: hsl(234, 90%, 4%); // #F0C1B6
+$secondary: hsl(26, 36%, 84%); //#E4D3C6
+$tertiary: hsl(44, 88%, 69%); // #F6D16C
+$bodybg:#EDF0F3;
+
+// GRAY COLORS
+$gray-4:hsl(218, 15%, 65%); //#98A2B3
+$gray-6:hsl(0, 0%, 95%); //#F2F2F2
+
+
+
+// TEXT COLORS
+$primary-text:hsl(0, 0%, 100%);  //#fff
+$secondary-text:#8F92A8;  //8F92A8
+$third-text:hsl(0, 0%, 55%); //8C8C8C
+$green:hsl(212, 100%, 70%); //64ACFF 
+
+
+// BACKGROUND COLORS
+$sectionBg: hsl(330, 12%, 97%); //#F8F6F7
+$green: hsl(166, 14%, 64%); //#95AFA9
+$greendark: hsl(87, 19%, 42%); //#6D7F57
+$grayBg: hsl(0, 0%, 85%); //#D9D9D9
+$payment-bg:#F5F6FA;
+$tagBg:#F5F5FF;
+$offBtnBg:#FFEDE3;
+$couponBtn :#4A5568;
+$totalCardBg:#F7FAFC;
+$fileUpload:#060970;
+
+
+// BORDER COLORS
+$footerborder:hsl(233, 13%, 25%); //#383A49
+$linkborder:#E2E8F0;
+$cardborder: hsl(0, 0%, 72%); //#B7B7B7
+$checkborder: hsla(217, 98%, 61%, 0.2); //rgba(57, 131, 253, 0.2)
+$inputborder: hsl(230, 11%, 89%); //#E0E1E6
+$placeholdertext: #B5B5BD; //#6A6A6A
+$orderborder: hsl(0, 0%, 92%); //#EBEBEB
+
+
+// NORMAL COLORS
+$white: hsl(0, 0%, 100%); //#ffffff
+$black: hsl(0, 0%, 0%); //#000000
+
+// BOX-SHADOWS
+$boxshadow-1: inset 0 .3125rem .3125rem rgba($black, 0.1);
+$boxshadow-2: 0 .25rem .25rem rgba($black, 0.1);
+$boxshadow-3: inset 0 .3125rem .3125rem rgba($black, 0.1);
+$dropshadow: drop-shadow(0 .3125rem .3125rem rgba($black, 0.1));
+
+// BOX-SHADOW COLORS
+$shadow-1: hsla(217, 98%, 61%, 0.102); //rgba(57, 131, 253, 0.1)
+
+// BOX SHADOWS
+$boxshadow-1: 0 .25rem 1.25rem $shadow-1;

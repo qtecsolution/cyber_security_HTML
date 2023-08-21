@@ -1,0 +1,21 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+
+
+.mybooking-filter {
+    @include flex;
+    flex-wrap: wrap;
+ 
+    .mybooking-filter-btn {
+        flex-grow: 1;
+    }
+
+   
+}
+
+ .booking-cards {
+    padding: size(24) size(0);
+    @include flex-column;
+    gap: size(24);
+} 
