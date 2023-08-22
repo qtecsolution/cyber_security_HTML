@@ -55,3 +55,88 @@
 
 }
 
+.whyCard2 {
+    border-radius: 8px;
+    background-image:  url(../images/landing2/whycard-bg.png);
+    background-repeat: no-repeat;
+    backdrop-filter: blur(100px);
+    padding: 50px 50px 85px 50px;
+    background-size: cover;
+    @include flex-column;
+    gap: size(24);
+    @include transitiontransform;
+    .title {
+        color: $white;
+        font-family: Comfortaa;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 31.2px;
+        letter-spacing: -0.52px;
+    }
+    .des {
+        color: $secondary-text;
+        font-family: Roboto Mono;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height:25px; 
+    } 
+    @include hover {
+     transform: translateY(-4px);
+    }
+}
+.howCard {
+    @include flex;
+    gap: size(24);
+    padding: size(20);
+    @include breakpoint(mobile576) {
+        gap: size(46);
+    }
+
+    .counter {
+        height: size(20);
+        padding: size(10) size(20);
+        background: #3A60FF;
+        display: inline-block;
+        @include flex-center;
+        margin-top: size(10);
+        .number {
+            display: inline-block;
+            color: #FFF;
+            font-family: Comfortaa;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 31.2px;
+            margin-top: -20px
+        }
+    }
+    .right-content {
+        @include flex-column;
+        gap: size(10);
+        height: 3px;
+        @include h100; 
+        @include breakpoint(mobile576) {
+            gap: size(24);
+        }
+        h3 {
+            color: $white;
+            font-family: Comfortaa;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 31.2px;
+            letter-spacing: -0.52px;
+        }
+        p {
+            color: $secondary-text;
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%
+        }
+
+    }
+}
