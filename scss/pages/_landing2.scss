@@ -144,3 +144,22 @@
         }
     }
 }
+/* Styles for the back to top button */
+#backToTopBtn {
+    display: none; /* Hide the button by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#backToTopBtn:hover {
+    background-color: #2980b9;
+}
