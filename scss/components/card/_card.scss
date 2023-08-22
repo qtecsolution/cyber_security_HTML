@@ -65,6 +65,12 @@
     @include flex-column;
     gap: size(24);
     @include transitiontransform;
+    &.whyCard3 {
+    background-image:  url(../images/landing2/whycard-bg-2.png);
+    }
+    &.whyCard4 {
+    background-image:  url(../images/landing2/whycard-bg-3.png);
+    }
     .title {
         color: $white;
         font-family: Comfortaa;

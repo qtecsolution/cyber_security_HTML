@@ -14,7 +14,7 @@
         <div class="loader"></div>
     </div>
     <!-- ==============- HEADER START -================== -->
-    <header class="header landing1 sticky-top">
+    <header class="header landing1 scroll-header sticky-top">
         <div class="container">
             <div class="header-content">
                 <nav class="header-nav d-none d-lg-flex" >
@@ -106,7 +106,7 @@
                         <div class="left-content">
                             <h1 class="hero-title">Protect your Business from Cyber Threats</h1>
                             <p class="hero-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy .</p>
-                            <a href="#" class="hero-btn">Get Started Nowed</a>
+                            <a href="#" class="hero-btn">Get Started Now</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
         </div>
     </section>
     <!-- ================WHY CHOOSE  SECTION START================ -->
-    <section class="whyChooseln2">
+    <section class="whyChooseln2 whyChooseln3">
         <div class="container">
             <h3 class="whyChooseln2-title">Why Choose our Phishing <br> Simulations?</h3>
             <div class="row g-4">
@@ -155,12 +155,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="whyCard2">
+                    <div class="whyCard2 whyCard3">
                         <div class="icon-wrapper">
                             <img src="assets/icons/landing2/whyicons/5.svg" alt="svg icon">
                         </div> 
                         <h3 class="title">Continuous Training and Improvement</h3>
                         <p class="des">Cyber threats evolve constantly, and so should your cybersecurity measures. With our platform, you can conduct regular simulations to keep your team's skills sharp and up-to-date. </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="whyCard2 whyCard4 h-100">
+                        
                     </div>
                 </div>
             </div>
@@ -358,7 +363,17 @@
     <!-- ==================FOOTER5 END=============== -->
     <button id="backToTopBtn" title="Go to top">Top</button>
     <script>
-  var backToTopBtn = document.getElementById("backToTopBtn");
+        const header = document.querySelector('.scroll-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolling');
+            } else {
+                header.classList.remove('scrolling');
+            }
+        });
+
+ var backToTopBtn = document.getElementById("backToTopBtn");
 var isScrolling = false; // Flag to track whether a scroll animation is in progress
 
 window.addEventListener("scroll", function() {

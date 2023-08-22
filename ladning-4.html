@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBERTECH LANDING TWO </title>
+    <title>CYBERTECH LANDING 4 </title>
     <!-- BOOTSTRAP CSS  -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
     <!-- STYLE CSS  -->
@@ -98,7 +98,7 @@
         </div>
     </header>
     <!-- ==============- HEADER END  -================== -->
-    <section class="hero hero-landing-2">
+    <section class="hero hero-landing-4">
         <div class="container">
             <div class="hero-content">
                 <div class="row g-0">
@@ -114,7 +114,7 @@
         </div>
     </section>
     <!-- ================WHY CHOOSE  SECTION START================ -->
-    <section class="whyChooseln2">
+    <section class="whyChooseln2 whyChooseln4">
         <div class="container">
             <h3 class="whyChooseln2-title">Why Choose our Phishing <br> Simulations?</h3>
             <div class="row g-4">
@@ -152,15 +152,6 @@
                         </div> 
                         <h3 class="title">Data-Driven Insights </h3>
                         <p class="des">Access detailed reports and analytics after each simulation to gain valuable insights into your team's performance. Use data to measure progress and identify areas for improvement.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="whyCard2">
-                        <div class="icon-wrapper">
-                            <img src="assets/icons/landing2/whyicons/5.svg" alt="svg icon">
-                        </div> 
-                        <h3 class="title">Continuous Training and Improvement</h3>
-                        <p class="des">Cyber threats evolve constantly, and so should your cybersecurity measures. With our platform, you can conduct regular simulations to keep your team's skills sharp and up-to-date. </p>
                     </div>
                 </div>
             </div>
@@ -357,9 +348,7 @@
     </footer>
     <!-- ==================FOOTER5 END=============== -->
     <button id="backToTopBtn" title="Go to top">Top</button>
-
     <script>
-        // header scrolling  
         const header = document.querySelector('.scroll-header');
 
         window.addEventListener('scroll', () => {
@@ -369,57 +358,45 @@
                 header.classList.remove('scrolling');
             }
         });
-        
-        var backToTopBtn = document.getElementById("backToTopBtn");
-        var isScrolling = false; // Flag to track whether a scroll animation is in progress
 
-        window.addEventListener("scroll", function() {
-            if (!isScrolling) {
-                scrollFunction();
-                updateHeaderScroll();
-            }
-        });
+ var backToTopBtn = document.getElementById("backToTopBtn");
+var isScrolling = false; // Flag to track whether a scroll animation is in progress
 
-        function scrollFunction() {
-            if (!isScrolling) {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    backToTopBtn.style.display = "block";
-                } else {
-                    backToTopBtn.style.display = "none";
-                }
-            }
+window.addEventListener("scroll", function() {
+    if (!isScrolling) {
+        scrollFunction();
+    }
+});
+
+function scrollFunction() {
+    if (!isScrolling) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
         }
+    }
+}
 
-        // Scroll to the top when the button is clicked
-        backToTopBtn.addEventListener("click", function() {
-            if (!isScrolling) {
-                isScrolling = true; // Set the flag to true before starting scroll animation
-                scrollToTop();
-            }
-        });
+// Scroll to the top when the button is clicked
+backToTopBtn.addEventListener("click", function() {
+    if (!isScrolling) {
+        isScrolling = true; // Set the flag to true before starting scroll animation
+        scrollToTop();
+    }
+});
 
-        function scrollToTop() {
-            var currentPosition = window.scrollY;
-            if (currentPosition > 0) {
-                window.requestAnimationFrame(scrollToTop);
-                window.scrollTo(0, currentPosition - currentPosition / 8);
-            } else {
-                isScrolling = false; // Reset the flag when scrolling is complete
-            }
-        }
+function scrollToTop() {
+    var currentPosition = window.scrollY;
+    if (currentPosition > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, currentPosition - currentPosition / 8);
+    } else {
+        isScrolling = false; // Reset the flag when scrolling is complete
+    }
+}
 
-        function updateHeaderScroll() {
-            var header = document.querySelector(".header");
-            var scrolledClass = "scrolled";
-
-            if (window.scrollY > 0) {
-                header.classList.add(scrolledClass);
-            } else {
-                header.classList.remove(scrolledClass);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
             var menuToggle = document.getElementById("menuToggle");
             var offcanvasMenu = document.getElementById("offcanvasMenu");
 
@@ -434,8 +411,8 @@
                 }
             });
         });
-    </script>
 
+    </script>
     
 </body>
 </html>

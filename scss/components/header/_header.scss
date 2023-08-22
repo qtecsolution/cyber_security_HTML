@@ -86,6 +86,7 @@
         background-size: cover;
         background-image: url(../images/hero-bg/2.png);
     }
+   
     &.hero-landing-3 {
         background-size: cover;
         background-image: none; 
@@ -110,6 +111,28 @@
 
 
 
+    }
+    &.hero-landing-4 {
+        background-size: auto;
+        background-position: 30px 100%;
+        background-image: url(../images/hero-bg/4.png);
+        @include breakpoint(mobile576) {
+        background-size: 100% 300px;
+        } 
+        @include breakpoint(mobile768) {
+        background-size: 100% 400px;
+            
+        }
+        @include breakpoint(tab992) {
+        background-size: 100% 600px;
+        background-position: right;
+            
+        }
+        @include breakpoint(desktop1200) {
+        background-size:cover;
+        background-position: right;
+            
+        }
     }
     .hero-content {
         position: absolute;
