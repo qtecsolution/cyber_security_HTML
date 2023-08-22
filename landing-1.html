@@ -66,6 +66,31 @@
                         <li class="rightMenu-item"><a href="#" class="hero-btn">Try for free</a></li>
                     </ul>
                 </nav>
+                <nav class="mobile-nav justify-content-between d-lg-none">
+                    <a href="">
+                        <figure>
+                        <img src="assets/images/laning1/logo.png" alt="">
+                    </figure> 
+                    </a>
+                    <div class="menu-toggle" id="menuToggle">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div> 
+                    <div class="offcanvas-menu" id="offcanvasMenu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Signup</a></li>
+                        </ul>
+                        <div class="ps-3 pt-2">
+                            <a href="#" class="hero-btn">Try for free</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -399,18 +424,84 @@
             </div>
     </footer>
     <!-- ==================FOOTER5 END=============== -->
-  <script>
-    const header = document.querySelector('.scroll-header');
+    <button id="backToTopBtn" title="Go to top">Top</button>
+    <script>
+        const header = document.querySelector('.scroll-header');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-            header.classList.add('scrolling');
-        } else {
-            header.classList.remove('scrolling');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolling');
+            } else {
+                header.classList.remove('scrolling');
+            }
+        });
+
+        var backToTopBtn = document.getElementById("backToTopBtn");
+        var isScrolling = false; // Flag to track whether a scroll animation is in progress
+
+        window.addEventListener("scroll", function () {
+            if (!isScrolling) {
+                scrollFunction();
+                updateHeaderScroll();
+            }
+        });
+
+        function scrollFunction() {
+            if (!isScrolling) {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            }
         }
-    });
 
-  </script>
+        // Scroll to the top when the button is clicked
+        backToTopBtn.addEventListener("click", function () {
+            if (!isScrolling) {
+                isScrolling = true; // Set the flag to true before starting scroll animation
+                scrollToTop();
+            }
+        });
+
+        function scrollToTop() {
+            var currentPosition = window.scrollY;
+            if (currentPosition > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, currentPosition - currentPosition / 8);
+            } else {
+                isScrolling = false; // Reset the flag when scrolling is complete
+            }
+        }
+
+        function updateHeaderScroll() {
+            var header = document.querySelector(".header");
+            var scrolledClass = "scrolled";
+
+            if (window.scrollY > 0) {
+                header.classList.add(scrolledClass);
+            } else {
+                header.classList.remove(scrolledClass);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuToggle = document.getElementById("menuToggle");
+            var offcanvasMenu = document.getElementById("offcanvasMenu");
+
+            menuToggle.addEventListener("click", function () {
+                offcanvasMenu.classList.toggle("show");
+            });
+
+            // Close the menu when clicking outside of it
+            document.addEventListener("click", function (event) {
+                if (!offcanvasMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    offcanvasMenu.classList.remove("show");
+                }
+            });
+        });
+
+    </script>
     
 </body>
 </html>
