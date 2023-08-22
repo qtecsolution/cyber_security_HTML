@@ -75,6 +75,19 @@
                 @include list-horizontal;
                 gap: size(24);
                }
+            } 
+            
+        }
+        .language {
+            background: #010314;
+            border: 1px solid $white;
+            color: #fff; 
+            padding: 10px 18px;
+            margin-top: auto;
+            cursor: pointer;
+            .option {
+                background-color: #010314;
+                color: #fff; 
             }
         }
     }
