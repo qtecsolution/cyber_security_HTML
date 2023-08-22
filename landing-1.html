@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- ==============- HEADER START -================== -->
-    <header class="header landing1">
+    <header class="header landing1 scroll-header sticky-top">
         <div class="container">
             <div class="header-content">
                 <nav class="header-nav d-none d-lg-flex" >
@@ -399,7 +399,18 @@
             </div>
     </footer>
     <!-- ==================FOOTER5 END=============== -->
-  
+  <script>
+    const header = document.querySelector('.scroll-header');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            header.classList.add('scrolling');
+        } else {
+            header.classList.remove('scrolling');
+        }
+    });
+
+  </script>
     
 </body>
 </html>

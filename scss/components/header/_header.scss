@@ -4,10 +4,7 @@
 .header {
     height: size(80); 
     @include flex;
-    background: $black;
     align-items: center;
- 
-
 }
 
 // nav 
@@ -75,8 +72,6 @@
    
 }
 
-
-
 .hero {
     background-image: url(../images/hero-bg/1.png);
     background-size: 80%;
@@ -85,9 +80,36 @@
     height: calc(100vh - 80px);
     // mix-blend-mode: hard-light;
     background-repeat: no-repeat; 
+    margin-top: -80px;
+    padding-top: size(80);
     &.hero-landing-2 {
         background-size: cover;
         background-image: url(../images/hero-bg/2.png);
+    }
+    &.hero-landing-3 {
+        background-size: cover;
+        background-image: none; 
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 80%; /* Set your default value here */
+            background-position: right;
+            background-repeat: no-repeat;
+            background-image: url(../images/hero-bg/3.png);
+            mix-blend-mode: luminosity;
+        }
+         .hero-content   {
+            z-index: 1;
+         }                  
+
+
+
+
     }
     .hero-content {
         position: absolute;
@@ -171,4 +193,13 @@
     .offcanvas-menu a:hover {
         color: #3498db;
     }
+}
+
+.scroll-header {
+    background-color: initial-color; /* Your initial background color */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.scroll-header.scrolling {
+    background-color: #010314; /* The new background color when scrolling starts */
 }
