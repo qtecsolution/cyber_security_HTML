@@ -211,3 +211,32 @@
         }
     }
 }
+
+.swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+    //   top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: size(-50);
+        left: 0;
+        width: 100%;
+    } 
+
+  .swiper-pagination-bullet {
+    background: #D9D9D9;
+    @include square(10);
+    opacity: .16;
+    &.swiper-pagination-bullet-active{
+        opacity: 1;
+    }
+  }  

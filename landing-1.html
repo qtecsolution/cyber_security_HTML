@@ -162,8 +162,7 @@
                 <p>With cyber threats becoming more <br/> sophisticated, traditional training methods <br/> are no longer enough. Our simulations offer: </p>
             </div>
             <div class="whyChoose-wrapper">
-                <div class="item" 
-                data-aos="fade-right"
+                <div class="item d-none d-lg-block" 
                 >
                     <figure class="securityThumb">
                         <img src="assets/images/laning1/security.png" alt="security image">
@@ -405,7 +404,7 @@
                                                         <path d="M43.5 86.0476V52.5476H19.8085C20.219 35.0476 25.022 33.0611 31.256 32.4941L33.5 32.1961V12.9531L30.889 13.1016C22.7485 13.5596 13.668 15.0271 7.6635 22.4396C2.4005 28.9376 0 39.5536 0 55.8501V86.0476H43.5Z" fill="white" fill-opacity="0.13"/>
                                                     </svg>
                                                 </div>
-                                                <div class="testimonial-text px-2">
+                                                <div class="testimonial-text">
                                                     <p>Cybertech CyberSec Simulations transformed our cybersecurity training. The realistic scenarios elevated our team's preparedness significantly.</p>
                                                 </div>
                                             </div>
@@ -450,7 +449,6 @@
                             
                             <!-- Add more slides as needed -->
                         </div>
-                
                         <!-- Add pagination -->
                         <div class="swiper-pagination"></div>
                 
@@ -580,6 +578,7 @@
     <button id="backToTopBtn" title="Go to top">Top</button>
     <!-- Include Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <script>
 
         const header = document.querySelector('.scroll-header');
@@ -658,11 +657,15 @@
         });
 
     </script>
+    <!-- SCRIPT FOR SWIPER JS SLIDER  -->
     <script>
             var swiper = new Swiper('.swiper-container', {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',

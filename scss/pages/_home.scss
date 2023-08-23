@@ -94,7 +94,7 @@
     }
     &-wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: size(20);
         .item:first-child {
             grid-column: span 2;
@@ -117,7 +117,8 @@
             @include w100;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.08);
-            mix-blend-mode: luminosity;
+            
+           mix-blend-mode: luminosity;
             backdrop-filter: blur(100px);
 
         }
