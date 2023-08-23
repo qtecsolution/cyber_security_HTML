@@ -28,6 +28,10 @@
         font-weight: 700;
         line-height: 40px; 
         letter-spacing: -0.96px;
+        margin-bottom: size(20);
+        @include breakpoint(mobile576) {
+            margin-bottom: size(50);
+        }
         @include breakpoint(mobile576) {
             font-size: 36px;
             line-height: size(50);
