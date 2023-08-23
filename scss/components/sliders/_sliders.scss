@@ -5,14 +5,12 @@
     padding: size(50) size(0);
     padding-bottom: size(100);
     .swiper-container {
-        width: 100%; /* Adjust as needed */
-        height: 100%; /* Adjust as needed */
-        /* Prevent overflow */
-        overflow: hidden;
+        width: 100%; 
+        height: 100%; 
       }
       
       .swiper-slide {
-        width: 100%; /* Make sure slides fit within the container */
+        width: 100%; 
       }
       
     
@@ -233,11 +231,11 @@
         width: 100%;
     } 
 
-  .swiper-pagination-bullet {
-    background: #D9D9D9;
-    @include square(10);
-    opacity: .16;
-    &.swiper-pagination-bullet-active{
-        opacity: 1;
-    }
-  }  
+    .swiper-pagination-bullet {
+        background: #D9D9D9;
+        @include square(10);
+        opacity: .16;
+        &.swiper-pagination-bullet-active{
+            opacity: 1;
+        }
+    }  
