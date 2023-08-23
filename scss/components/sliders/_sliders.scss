@@ -8,6 +8,7 @@
         width: 100%; /* Adjust as needed */
         height: 100%; /* Adjust as needed */
         /* Prevent overflow */
+        overflow: hidden;
       }
       
       .swiper-slide {
@@ -141,7 +142,7 @@
             transform: translateX(-50%);
             padding: size(12) size(20);
             @include radius(6);
-           width: size(272);
+            width: size(272);
             @include flex-column;
             align-items: center;
             @include breakpoint(tab992) {

@@ -63,7 +63,10 @@
     padding: size(32) size(50);
     background-size: cover;
     @include flex-column;
-    height: size(346);
+    
+    @include breakpoint(mobile576) {
+        height: size(346);
+    }
     gap: size(24);
     @include transitiontransform;
     &.whyCard3 {
@@ -71,6 +74,7 @@
     }
     &.whyCard4 {
     background-image:  url(../images/landing2/whycard-bg-3.png);
+    min-height: size(346);
     }
     .title {
         color: $white;
