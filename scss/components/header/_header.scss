@@ -82,6 +82,7 @@
     background-repeat: no-repeat; 
     margin-top: -80px;
     padding-top: size(80);
+    overflow: hidden;
     &.hero-landing-2 {
         background-size: cover;
         background-image: url(../images/hero-bg/2.png);

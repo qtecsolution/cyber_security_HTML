@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper Slide with Dots and Navigation</title>
+  
+  <!-- Include Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+  <style>
+    /* Style for pagination dots */
+    .swiper-pagination {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Style for navigation buttons */
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .swiper-button-prev {
+      left: 10px;
+    }
+    
+    .swiper-button-next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Add pagination -->
+    <div class="swiper-pagination"></div>
+  
+ 
+  </div>
+
+  <div class="custom-buttons">
+    <button class="custom-prev-button">Previous</button>
+    <button class="custom-next-button">Next</button>
+  </div>
+  
+
+  <!-- Include Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // Get references to your custom buttons
+  var customPrevButton = document.querySelector('.custom-prev-button');
+  var customNextButton = document.querySelector('.custom-next-button');
+
+  // Add click event listeners to your custom buttons
+  customPrevButton.addEventListener('click', function() {
+    swiper.slidePrev();
+  });
+
+  customNextButton.addEventListener('click', function() {
+    swiper.slideNext();
+  });
+</script>
+
+</body>
+</html>
