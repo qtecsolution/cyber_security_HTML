@@ -75,6 +75,7 @@
 .hoWroks {
     &-top {
         padding-bottom: size(64);
+        position: relative;
     }
     &-title {
         background: radial-gradient(71.91% 119.43% at 50.00% 50.63%, #FFF 0%, rgba(255, 255, 255, 0.32) 100%);
@@ -195,4 +196,7 @@
 
 #backToTopBtn:hover {
     background-color: #2980b9;
+}
+.gap {
+    height: size(160);
 }
