@@ -93,3 +93,95 @@ button,
     padding-left: size(100);
   }
 }
+
+// daasboard buttons 
+.primary-btn-dashboard {
+  padding: size(10) size(20); 
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #64ACFF;
+  background:#64ACFF;
+  @include radius(6);
+  color: #05080D;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
+.cancel-btn-dashboard {
+  padding: size(10) size(20); 
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #333;
+  background:#333;
+  @include radius(6);
+  color: white;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
+.cancel-btn-dashboard1 {
+  padding: size(10) size(20); 
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #111;
+  background:#111;
+  @include radius(6);
+  color: white;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
+.cancel-btn-dashboard2 {
+  padding: size(10) size(20); 
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #222;
+  background:#222;
+  @include radius(6);
+  color: white;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
+.cancel-btn-dashboard3 {
+  padding: size(10) size(20); 
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #333;
+  background:#333;
+  @include radius(6);
+  color: white;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
