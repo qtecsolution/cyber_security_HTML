@@ -222,3 +222,22 @@ button,
 
 
 }
+.primary-btn-square {
+ @include square(42);
+ @include flex-center;
+  // padding: 1.5rem;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: 1px solid  #64ACFF;
+  background:#64ACFF;
+  @include radius(6);
+  color: white;
+  @include font($primaryFont,16,medium,normal,20);
+
+  
+  @include transitionsall;
+  @include hover {
+    @include setBgColor($white,#05080D);
+  } 
+
+
+}
